@@ -4,6 +4,7 @@ import Blogs from "./component/Blogs";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import Navigation from "./component/Navigation";
+import Blog from "./component/Blog";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:title" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<Error />} />
         </Routes>
