@@ -1,6 +1,8 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <h1>Contact Page</h1>
@@ -17,6 +19,11 @@ const Contact = () => {
         debitis similique cupiditate repellat fugit iure quod atque corporis
         saepe!
       </p>
+      <Link to="/">
+        <button className="btn btn-danger">Home</button> 
+      </Link> <br />
+      <button className="btn btn-primary"
+       onClick={()=>{navigate("/blogs")}}>useNavigate to Blogs</button>
     </div>
   );
 };
